@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khwatsi Chauke | Tech Portfolio</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="Images/WhatsApp Image 2025-07-01 at 10.34.24 PM.jpeg"
+        alt="My Avatar"
+        class="nav-logo"
+      />
+      <h1>Khwatsi Faith Chauke</h1>
+      <div class="typing">
+        Aspiring Full-Stack/ UX/UI Developer | AI Enthusiast | Creative
+        Problem-Solver
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Tech Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="icon">💡</div>
+      <p>
+        I’m Khwatsi Chauke, a 20-year-old full-stack developer based in Soweto,
+        Johannesburg. Currently part of the FNB App Academy tech bootcamp, I am
+        passionate about building efficient, scalable digital solutions. I am
+        multilingual, curious, and driven by a love for technology and
+        innovation.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card">💻 HTML & CSS</div>
+        <div class="card">🧠 JavaScript</div>
+        <div class="card">⚛️ React</div>
+        <div class="card">🌐 Node.js</div>
+        <div class="card">🔧 Git & GitHub</div>
+        <div class="card">🗄️ Django</div>
+      </div>
+    </section>
+
+    <section id="journey">
+      <h2>My Tech Journey</h2>
+      <div class="icon">🚀</div>
+      <p>
+        I began my coding journey with self-taught HTML and CSS by joining the
+        FNB App Academy, a 9-week full-stack development bootcamp. There, I’ve
+        been exposed to real-world problem-solving, creative projects, and agile
+        development. I'm learning how to build full applications from front to
+        back, continuously growing as a developer.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="icon">🛠️</div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="frontend">Front-End</button>
+        <button data-filter="fullstack">Full-Stack</button>
+        <button data-filter="fun">Fun</button>
+      </div>
+
+      <!-- PROJECT CARDS -->
+      <div class="projects">
+        <div class="card" data-category="frontend">
+          <h3>🎨 My Demo E-commerce Store</h3>
+          <p>My Very first coding project inspired by my business.</p>
+          <a class="button" href="https://rikotse.github.io/Khwatsi-Krafts/"
+            >View Project</a
+          >
+        </div>
+        <div class="card" data-category="frontend">
+          <h3>🧮 Calculator App</h3>
+          <p>Scientific Calculator built using HTML, CSS & JavaScript.</p>
+          <a class="button" href="https://rikotse.github.io/Calculator-App/"
+            >View Project</a
+          >
+        </div>
+        <div class="card" data-category="fullstack">
+          <h3>🍝 Restaurant Website</h3>
+          <p>
+            Full-stack restaurant site for ordering, reservations, and more.
+          </p>
+          <a class="button" href="#">View Project</a>
+        </div>
+        <div class="card" data-category="frontend">
+          <h3>💌 A Web Invitation</h3>
+          <p>Stylish HTML & CSS invitation with responsive design.</p>
+          <a class="button" href="https://rikotse.github.io/Murisi/"
+            >View Project</a
+          >
+        </div>
+        <div class="card" data-category="fun">
+          <h3>🦸🏾‍♀️ Avengers App</h3>
+          <p>Fun project featuring Avengers characters and their bios.</p>
+          <a class="button" href="#">View Project</a>
+        </div>
+        <div class="card" data-category="fullstack">
+          <h3>🦁 Pine City Zoo App</h3>
+          <p>
+            Zoo exploration app with weather, animal info, and conservation.
+          </p>
+          <a class="button" href="https://rikotse.github.io/Pine-City-Zoo/"
+            >View Project</a
+          >
+        </div>
+        <div class="card" data-category="frontend">
+          <h3>👩🏾‍💻 My Portfolio</h3>
+          <p>This portfolio website built with HTML, CSS & JavaScript.</p>
+          <a class="button" href="https://rikotse.github.io/My-Portfolio/"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="icon">📬</div>
+      <p>Feel free to connect with me on the following platforms:</p>
+      <p>
+        <a href="https://github.com/rikotse" target="_blank">GitHub</a> |
+        <a href="www.linkedin.com/in/khwatsi-chauke-4576b9295" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+      <p>Email: 11faith.c@gmail.com</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Khwatsi Faith Chauke. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll("section");
+      const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          if (sectionTop < triggerBottom) {
+            section.classList.add("visible");
+          }
+        });
+      };
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+
+      // Project Filter Logic
+      const filterButtons = document.querySelectorAll(".filter-buttons button");
+      const projectCards = document.querySelectorAll(".projects .card");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          projectCards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+
+            if (filter === "all" || category === filter) {
+              card.classList.remove("hide");
+            } else {
+              card.classList.add("hide");
+            }
+          });
+        });
+      });
+
+      // Typing effect for the header
+
+      const typingText = document.querySelector(".typing");
+      const text =
+        "Aspiring Full-Stack Developer/ UX/UI Developer | AI Enthusiast | Creative Problem-Solver";
+      typingText.textContent = "";
+      let index = 0;
+      function type() {
+        if (index < text.length) {
+          typingText.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 100);
+        }
+      }
+      type();
+    </script>
+  </body>
+</html>
