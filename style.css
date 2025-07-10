@@ -290,13 +290,28 @@ a:hover {
   }
 
   nav {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
     gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 0.5rem;
   }
+  nav a {
+    width: 90%; /* Make links fill most of the column */
+    margin: 0.2rem 0;
+    text-align: center;
+  }
+  .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
   .typing {
     font-size: 0.9rem;
     height: auto;
     white-space: normal;
+    overflow-wrap: anywhere;
     border-right: 2px solid #fff;
     padding: 0 0.5rem;
     text-align: center;
