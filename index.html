@@ -22,7 +22,9 @@
         Aspiring Full-Stack/ UX/UI Developer | AI Enthusiast | Creative
         Problem-Solver
       </div>
-      <nav>
+      <div class="hamburger" id="hamburger">☰</div>
+
+      <nav id="navMenu" class="nav-collapsed">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#journey">Tech Journey</a>
@@ -145,7 +147,7 @@
       </p>
       <p>Email: 11faith.c@gmail.com</p>
     </section>
-
+    <button id="backToTop" title="Go to top">↑</button>
     <footer>
       <p>&copy; 2025 Khwatsi Faith Chauke. All rights reserved.</p>
     </footer>
@@ -202,6 +204,53 @@
         }
       }
       type();
+
+      // Back to Top Button Logic
+      const backToTopButton = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Mobile Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navMenu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
+      // Scrollspy Navigation
+      const sectionsSpy = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        sectionsSpy.forEach((section) => {
+          const sectionTop = section.offsetTop - 360; // Adjust based on header height
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
