@@ -37,13 +37,13 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   animation: slideInDown 1s ease-out;
   font-family: "Roboto", sans-serif;
 }
 
 .typing {
-  font-size: 1.2rem;
+  font-size: 1.02rem;
   color: #f8f0fc;
   margin-top: 0.5rem;
   height: 1.5rem;
@@ -52,11 +52,11 @@ header h1 {
   border-right: 3px solid #fff;
   animation: typing 12s steps(40, end) infinite, blink 4s step-end infinite;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 nav {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +89,14 @@ nav a.active {
   border-color: white;
 }
 
+.nav-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 35%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
 /* Hamburger menu */
 .hamburger {
   display: none;
@@ -118,6 +126,17 @@ nav a.active {
 }
 .nav-collapsed.show {
   display: flex !important;
+}
+
+.nav-collapsed a {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 19px;
+}
+.nav-collapsed a:hover {
+  background-color: #5a009e;
+  color: white;
 }
 
 /* Icon styling */
@@ -349,14 +368,16 @@ footer {
     right: 1rem;
   }
   .nav-collapsed {
+    max-height: 70vh;
+    overflow-y: auto;
     width: 90vw;
-    left: 5vw;
+    left: 2vw;
     right: auto;
-    top: 60px;
+    top: 50px;
     position: absolute;
     display: none;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 0.2rem;
     z-index: 3000;
   }
   .nav-collapsed.show {
@@ -364,15 +385,17 @@ footer {
   }
   .nav-collapsed a {
     width: 90%;
-    margin: 0.2rem 0;
+    margin: 0.1rem 0;
     text-align: center;
+    border-radius: 19px;
+    padding: 0.5rem;
   }
   .icon {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
   .typing {
-    font-size: 0.9rem;
+    font-size: 1rem;
     height: auto;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -381,5 +404,13 @@ footer {
     text-align: center;
     word-break: break-word;
     animation: none;
+  }
+
+  .nav-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 35%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
   }
 }
