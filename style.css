@@ -140,12 +140,6 @@ nav a.active {
   box-shadow: 0 0 8px 0 var(--accent);
   opacity: 0.9;
 }
-.nav-collapsed.show a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 0 8px 0 var(--accent);
-  opacity: 0.9;
-}
 
 /* Icon styling */
 .icon {
@@ -294,6 +288,12 @@ footer {
   position: absolute;
 }
 
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -361,10 +361,16 @@ footer {
   header {
     height: auto;
     padding: 1rem 0.5rem;
-    min-height: 120px;
+    min-height: 140px;
   }
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.32rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  header p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
   }
   nav {
     display: none !important;
@@ -373,21 +379,27 @@ footer {
     display: block;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
+  }
+  body {
+    margin-top: 220px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
   }
   .nav-collapsed,
   .nav-collapsed.show {
     position: fixed;
-
-    left: 2vw;
-    width: 100vw;
+    right: 1rem;
+    left: 0.5rem;
+    width: auto;
     max-height: 70vh;
     z-index: 99999;
     background: var(--accent);
     overflow-y: auto;
     display: none;
     grid-template-columns: 1fr 1fr;
-    gap: 0.2rem;
+    gap: 0.5rem;
     padding: 2rem 1rem 1rem 1rem;
     border-radius: 0 0 16px 16px;
   }
@@ -395,7 +407,7 @@ footer {
     display: grid !important;
   }
   .nav-collapsed a {
-    width: 90%;
+    width: 75%;
     margin: 0.1rem 0;
     text-align: center;
     border-radius: 19px;
@@ -409,11 +421,11 @@ footer {
   }
 
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
   .typing {
-    font-size: 1rem;
+    font-size: 0.85rem;
     height: auto;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -425,8 +437,8 @@ footer {
   }
 
   .nav-logo {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 35%;
     object-fit: cover;
     margin-bottom: 0.5rem;
