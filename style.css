@@ -134,9 +134,17 @@ nav a.active {
   text-align: center;
   border-radius: 19px;
 }
-.nav-collapsed a:hover {
-  background-color: #5a009e;
-  color: white;
+.nav-collapsed.show a:hover {
+  color: var(--primary);
+  border-color: var(--accent);
+  box-shadow: 0 0 8px 0 var(--accent);
+  opacity: 0.9;
+}
+.nav-collapsed.show a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 8px 0 var(--accent);
+  opacity: 0.9;
 }
 
 /* Icon styling */
@@ -367,18 +375,21 @@ footer {
     top: 1rem;
     right: 1rem;
   }
-  .nav-collapsed {
-    max-height: 70vh;
-    overflow-y: auto;
-    width: 90vw;
+  .nav-collapsed,
+  .nav-collapsed.show {
+    position: fixed;
+
     left: 2vw;
-    right: auto;
-    top: 50px;
-    position: absolute;
+    width: 100vw;
+    max-height: 70vh;
+    z-index: 99999;
+    background: var(--accent);
+    overflow-y: auto;
     display: none;
     grid-template-columns: 1fr 1fr;
     gap: 0.2rem;
-    z-index: 3000;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 0 0 16px 16px;
   }
   .nav-collapsed.show {
     display: grid !important;
@@ -390,6 +401,13 @@ footer {
     border-radius: 19px;
     padding: 0.5rem;
   }
+  .nav-collapsed.show a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 8px 0 var(--accent);
+    opacity: 0.9;
+  }
+
   .icon {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
