@@ -90,4 +90,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     type();
   }
+
+  // Blog post expansion functionality
+  const blogPosts = document.querySelectorAll(".blog-post");
+  const readMoreButtons = document.querySelectorAll(".read-more-btn");
+  const overlay = document.getElementById("blogOverlay");
+  let expandedPost = null;
+
+  function expandPost(post) {
+    // Collapse any currently expanded post
+    if (expandedPost) {
+      collapsePost(expandedPost);
+    }
+
+    // Expand the clicked post
+    post.classList.add("expanded");
+    expandedPost = post;
+
+    // Show overlay
+    overlay.style.display = "block";
+
+    // Scroll to the post if it's not fully in view
+    post.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function collapsePost(post) {
+    post.classList.remove("expanded");
+    expandedPost = null;
+    overlay.style.display = "none";
+  }
+
+  // Add click events to read more buttons
+  readMoreButtons.forEach((button, index) => {
+    button.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const post = button.closest(".blog-post");
+
+      if (post.classList.contains("expanded")) {
+        collapsePost(post);
+      } else {
+        expandPost(post);
+      }
+    });
+  });
+
+  // Close expanded post when clicking on overlay
+  overlay.addEventListener("click", () => {
+    if (expandedPost) {
+      collapsePost(expandedPost);
+    }
+  });
+
+  // Close expanded post when clicking outside on mobile
+  if (window.innerWidth <= 700) {
+    document.addEventListener("click", (e) => {
+      if (expandedPost && !expandedPost.contains(e.target)) {
+        collapsePost(expandedPost);
+      }
+    });
+  }
 });
