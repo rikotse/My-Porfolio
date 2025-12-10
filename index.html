@@ -3,450 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khwatsi Chauke | Tech Portfolio</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Khwatsi Chauke | Creative Engineer</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <img
-        src="Images/WhatsApp Image 2025-07-01 at 10.34.24 PM.jpeg"
-        alt="My Avatar"
-        class="nav-logo"
-      />
-      <h1>Khwatsi "Rikotse" Chauke</h1>
-      <div class="typing">
-        Future Software Engineer | UX/UI Creator | AI-Powered Problem Solver
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="glass-nav">
+      <div class="logo">KC.</div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">Story</a>
+        <a href="#work">Work</a>
       </div>
-      <div class="hamburger" id="hamburger">☰</div>
+      <a href="#contact" class="btn-talk">Let's Talk</a>
+    </nav>
 
-      <nav id="nav" class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#journey">Tech Journey</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <span class="pill">✨ The Creative Engineer</span>
 
-      <nav id="navMenu" class="nav-collapsed">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#journey">Tech Journey</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+        <h1>
+          I architect <span class="gradient-text">intelligent data</span> <br />
+          & craft <span class="gradient-text">beautiful software</span>.
+        </h1>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="icon">💡</div>
-      <p>
-        My journey into tech began with curiosity and a drive to teach myself
-        HTML and CSS. That spark turned into a career path when I joined the
-        <strong>FNB App Academy</strong>, a 9-week full-stack development
-        bootcamp, where I gained hands-on experience building real-world
-        projects, solving complex problems, and collaborating in agile teams.
-      </p>
-      <p>
-        Currently, I’m expanding my expertise as a
-        <strong>Data Engineering Fellow at ALX Africa</strong>, where I’m
-        mastering the backbone of the digital world: building robust data
-        pipelines, managing big data, and creating production-ready systems that
-        empower organisations to become truly data-driven. Through project-based
-        learning, I’m developing modern, tool-agnostic skills in Python, SQL,
-        cloud computing (AWS), and data analytics, all while tackling real-world
-        challenges that mirror the work of leading tech companies.
-      </p>
-      <p>
-        At the same time, I’m pursuing a
-        <strong>BA in Development Studies at UNISA</strong>, strengthening my
-        analytical, research, and problem-solving skills. My mission is simple:
-        keep learning, keep building, and continue stacking the skills and
-        experiences that will make me a world-class Software Engineer and Data
-        Engineer.
-      </p>
-    </section>
+        <p>
+          Hi, I'm <strong>Khwatsi Faith Chauke</strong>. <br />
+          I am a Developer who refuses to choose between form and function. I
+          use <strong>Python & SQL</strong> to build robust backends, and
+          <strong>Creative Design</strong> to make them intuitive.
+        </p>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="card">💻 HTML & CSS</div>
-        <div class="card">🧠 JavaScript</div>
-        <div class="card">⚛️ React</div>
-        <div class="card">🌐 Node.js</div>
-        <div class="card">🔧 Git & GitHub</div>
-        <div class="card">🗄️ Django</div>
-        <div class="card">🐍 Flask</div>
-        <div class="card">🗃️ SQL Databases</div>
-      </div>
-    </section>
-
-    <section id="journey">
-      <h2>My Tech Journey</h2>
-      <div class="icon">🚀</div>
-      <p>
-        My love for technology began with curiosity — staying up late, tinkering
-        with code, and teaching myself the basics of HTML and CSS. That spark
-        grew into a purposeful path when I joined the
-        <strong>FNB App Academy</strong>, where I built projects I’m proud of
-        and collaborated in agile teams, sharpening my problem-solving, critical
-        thinking, and full-stack development skills.
-      </p>
-      <p>
-        Today, I’m part of the <strong>ALX Data Engineering program</strong>, a
-        7-month, intensive course designed to equip me with the tools and
-        experience needed to become a proficient data engineer. I’m diving deep
-        into Python programming, data analytics, big data, distributed systems,
-        and production-ready pipelines, while applying my learning to
-        real-world, project-based challenges. This experience is preparing me to
-        design scalable, high-performing systems that enable organisations to
-        leverage data for strategic decision-making and impactful solutions.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="icon">🛠️</div>
-
-      <!-- FILTER BUTTONS -->
-      <div class="filter-buttons">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="frontend">Front-End</button>
-        <button data-filter="fullstack">Full-Stack</button>
-        <button data-filter="fun">Fun</button>
-      </div>
-
-      <!-- PROJECT CARDS -->
-      <div class="projects">
-        <div class="card fullstack" data-category="fullstack">
-          <h3>✅ Task Manager App</h3>
-          <p>
-            Flask-based task management application with user authentication.
-          </p>
-          <a class="button" href="https://task-manager-app-cez8.onrender.com"
-            >View Project</a
-          >
-        </div>
-        <div class="card fullstack featured" data-category="fullstack">
-          <h3>🍝 Restaurant Website</h3>
-          <p>
-            Full-stack restaurant site for ordering, reservations, and more.
-          </p>
-          <a class="button" href="https://rikotse.pythonanywhere.com/"
-            >View Project</a
-          >
-        </div>
-        <div class="card fun" data-category="fun">
-          <h3>🧘🏾‍♀️Virtual Zen App</h3>
-          <p>
-            Interactive meditation web app with ambient environments,
-            soundscapes, and breathing exercises. Responsive design built with
-            HTML5, CSS3, and JavaScript.
-          </p>
-          <a
-            class="button"
-            href="https://rikotse.github.io/Dream-Virtual-Zen-Garden/"
-            >View Project</a
-          >
-        </div>
-        <div class="card frontend" data-category="frontend">
-          <h3>🎨 Demo E-commerce Store</h3>
-          <p>My Very first coding project inspired by my business.</p>
-          <a
-            class="button"
-            href="https://rikotse.github.io/Khwatsi-Krafts-Demo/"
-            >View Project</a
-          >
-        </div>
-        <div class="card frontend" data-category="frontend">
-          <h3>🧮 Calculator App</h3>
-          <p>Scientific Calculator built using HTML, CSS & JavaScript.</p>
-          <a class="button" href="https://rikotse.github.io/Calculator-App/"
-            >View Project</a
-          >
-        </div>
-        <div class="card frontend" data-category="frontend">
-          <h3>💌 A Web Invitation</h3>
-          <p>Stylish HTML & CSS invitation with responsive design.</p>
-          <a class="button" href="https://rikotse.github.io/Murisi/"
-            >View Project</a
-          >
-        </div>
-        <div class="card fun" data-category="fun">
-          <h3>🦸🏾‍♀️ Avengers App</h3>
-          <p>Fun project featuring Avengers characters and their bios.</p>
-          <a class="button" href="https://rikotse.github.io/Avengers-Web-App/"
-            >View Project</a
-          >
-        </div>
-        <div class="card fullstack" data-category="fullstack">
-          <h3>🦁 Pine City Zoo App</h3>
-          <p>
-            Zoo exploration app with live weather, animal info, and
-            conservation.
-          </p>
-          <a class="button" href="https://rikotse.github.io/Pine-City-Zoo/"
-            >View Project</a
-          >
-        </div>
-        <div class="card frontend" data-category="frontend">
-          <h3>👩🏾‍💻 My Portfolio</h3>
-          <p>This portfolio website built with HTML, CSS & JavaScript.</p>
-          <a class="button" href="https://rikotse.github.io/My-Porfolio/"
-            >View Project</a
-          >
+        <div class="hero-buttons">
+          <a href="#work" class="btn-primary">View My Code</a>
+          <a href="#about" class="btn-secondary">Read My Story</a>
         </div>
       </div>
     </section>
 
-    <section id="blog">
-      <h2>Blog</h2>
-      <div class="icon">📝</div>
-      <h4>Sharing my thoughts, learnings, and experiences in tech.</h4>
-      <div class="blog-posts">
-        <article class="blog-post">
-          <h3>My Journey Through the FNB App Academy Bootcamp</h3>
-          <p class="blog-date">July 25, 2025</p>
-          <div class="blog-post-content">
-            <div class="blog-post-preview">
-              <p>
-                From my very first "Hello World" to building full-stack
-                applications in just 9 weeks, the FNB App Academy bootcamp was a
-                life-changing experience. It showed me that with focus and
-                persistence, I can learn and create anything I set my mind to.
-              </p>
-            </div>
-            <button class="read-more-btn">Read More</button>
-            <button class="read-less-btn">Read Less</button>
-            <div class="blog-post-full">
-              <p>
-                My journey into coding officially began at the FNB App Academy
-                bootcamp, a 9-week intensive program that opened the doors to
-                full-stack development. From the very first moment I ran "Hello
-                World," I knew I had fallen in love with coding. It was exciting
-                to see something I typed on the screen come to life.
-              </p>
-              <p>
-                The program was fast-paced, covering a wide range of skills in a
-                short amount of time. Within weeks, we went from writing simple
-                HTML and CSS pages to tackling JavaScript and Python projects.
-                The amount of information packed into those 9 weeks was
-                overwhelming at times, but also incredibly rewarding.
-              </p>
-              <p>
-                Debugging became one of my favorite parts of the process. Every
-                error message was a challenge waiting to be solved, and each
-                solution brought a sense of accomplishment. Watching my web apps
-                evolve with every fix and new feature made me realize how
-                powerful coding really is.
-              </p>
-              <p>
-                Through the bootcamp, I learned the importance of persistence,
-                problem-solving, and collaboration. More than just the technical
-                knowledge, I gained confidence in my ability to grow as a
-                developer. It taught me that learning never stops and that I am
-                capable of mastering any skill I put my mind to.
-              </p>
-              <p>
-                I will always be grateful to FNB and IT Varsity for giving me
-                this opportunity. Their support and guidance set the foundation
-                for my career in tech, and I’m excited to keep building,
-                learning, and creating as I continue my journey as a full-stack
-                developer.
-              </p>
-            </div>
+    <section id="about" class="container">
+      <h2 class="section-title">The Full Picture</h2>
+      <div class="bento-grid">
+        <div class="card profile-card">
+          <img src="images/profile-pic.jpg" alt="Khwatsi" class="profile-img" />
+          <h3>Khwatsi Faith Chauke</h3>
+          <p>Creative Engineer 🇿🇦</p>
+        </div>
+
+        <div class="card story-card">
+          <h3>What is a Creative Engineer?</h3>
+          <p>
+            It means I don't just write code; I craft experiences. I am a
+            <strong>Full-Stack Developer</strong> leveling up in
+            <strong>Data Engineering</strong> at ALX. <br /><br />
+            My competitive edge? I use <strong>logic</strong> to build robust
+            systems (like restaurant apps & task managers) and
+            <strong>creativity</strong> to ensure they are intuitive and
+            human-centric. I turn complex problems into elegant solutions.
+          </p>
+        </div>
+
+        <div class="card tech-card frontend">
+          <h4>🎨 The Design Eye</h4>
+          <div class="tags">
+            <span>HTML5 </span>
+            <span>Responsive UI</span>
+            <span>JavaScript </span>
+            <span>CSS3 & Animations</span>
+            <span>User Experience (UX)</span>
+            <span>JavaScript </span>
           </div>
-        </article>
+        </div>
 
-        <article class="blog-post">
-          <h3>My Experience at the Johannesburg Amazon Summit 2025</h3>
-          <p class="blog-date">August 22, 2025</p>
-          <div class="blog-post-content">
-            <div class="blog-post-preview">
-              <p>
-                Attending the Amazon Summit in Johannesburg was an eye-opening
-                experience. Although I registered as a student and was limited
-                to the student zone, it gave me a new perspective on the tech
-                community and the value of networking in the industry.
-              </p>
-            </div>
-            <button class="read-more-btn">Read More</button>
-            <button class="read-less-btn">Read Less</button>
-            <div class="blog-post-full">
-              <p>
-                The Johannesburg Amazon Summit 2025 was my first major tech
-                conference, and I was excited to dive into the world of cloud,
-                innovation, and networking. However, when registering I
-                mistakenly signed up as a student, which meant I wasn’t allowed
-                into the main building where the core sessions were happening.
-                Instead, I was placed in the student zone — a space designed
-                more for introductory exposure than in-depth learning.
-              </p>
-              <p>
-                At first, I was a little disappointed because I felt like I was
-                missing out on the deeper technical sessions, but the experience
-                still had its own value. I connected with other students and
-                young developers who were also starting their journeys in tech.
-                It became more of a social experience, and through conversations
-                I gained insights into different learning paths, struggles, and
-                opportunities others were exploring.
-              </p>
-              <p>
-                Being surrounded by so many like-minded people gave me a new
-                appreciation for the importance of community in tech. It
-                reminded me that growth doesn’t just come from workshops or
-                certifications — it also comes from sharing experiences, asking
-                questions, and building relationships.
-              </p>
-              <p>
-                While I didn’t get the full summit experience I had hoped for,
-                it was still an important milestone for me. It made me realize
-                how important it is to take every opportunity seriously — even
-                small details like how you register. Next time, I’ll make sure
-                to sign up properly so I can attend the main sessions and absorb
-                as much knowledge as possible.
-              </p>
-              <p>
-                Most importantly, the summit sparked a fire in me to keep
-                showing up in spaces like these. Even if things don’t go as
-                planned, every experience has something to teach, and this one
-                taught me to always stay curious and intentional about my growth
-                in tech.
-              </p>
-            </div>
+        <div class="card tech-card data">
+          <h4>⚙️ The Data Brain</h4>
+          <div class="tags">
+            <span>Python</span>
+            <span>PostgreSQL & SQL</span>
+            <span>Flask & Django</span>
+            <span>SQL Databases</span>
+            <span>Git & GitHub</span>
+            <span>API Architecture</span>
           </div>
-        </article>
-
-        <article class="blog-post">
-          <h3>Building Lorraine's Restaurant Web App</h3>
-          <p class="blog-date">August 13, 2025</p>
-          <div class="blog-post-content">
-            <div class="blog-post-preview">
-              <p>
-                Lorraine's Restaurant web app has been one of my most exciting
-                projects — from building a beautiful menu layout to adding real
-                functionality like bookings, ordering, and a working cart
-                system. It challenged me to grow as both a front-end and
-                back-end developer.
-              </p>
-            </div>
-            <button class="read-more-btn">Read More</button>
-            <button class="read-less-btn">Read Less</button>
-            <div class="blog-post-full">
-              <p>
-                When I started building Lorraine's Restaurant, my goal was
-                simple: create a visually appealing site where users could
-                browse the menu and book a table. But as the project grew, I
-                realized I wanted to push myself further and bring in real-world
-                functionality like filtering menu items, customizing orders, and
-                persisting cart data.
-              </p>
-              <p>
-                The front-end came first: designing the homepage, setting up the
-                restaurant’s story, and styling the menu sections. I wanted
-                users to feel like they were stepping into a real restaurant
-                space, so I focused on details like smooth navigation,
-                scrollable category tabs, and animations that made the
-                experience interactive.
-              </p>
-              <p>
-                The real challenge came when I started implementing the logic. I
-                worked on:
-              </p>
-              <ul>
-                <li>
-                  A booking form that validates input and allows users to
-                  reserve tables.
-                </li>
-                <li>
-                  A cart system with quantity increment/decrement, remove
-                  buttons, and localStorage persistence.
-                </li>
-                <li>
-                  A menu customization modal where users can add notes before
-                  sending items to the cart.
-                </li>
-                <li>
-                  Smooth scrolling between menu categories for better
-                  navigation.
-                </li>
-              </ul>
-              <p>
-                Debugging became a huge part of the journey — from fixing a
-                stubborn hamburger menu that wouldn’t behave on mobile, to
-                ensuring that cart totals updated dynamically every time an
-                order changed. Each solved bug felt like a small victory, and it
-                reminded me why I enjoy coding so much.
-              </p>
-              <p>
-                What I love most about this project is how it represents the
-                blend of creativity and problem-solving. It wasn’t just about
-                making things look good, but about making them work in a way
-                that feels natural and easy for users.
-              </p>
-              <p>
-                Lorraine’s Restaurant taught me how to think like a user, write
-                cleaner JavaScript, and structure my files better for
-                scalability. It’s still a work in progress, but each update
-                brings me closer to building a full-stack app that feels
-                production-ready.
-              </p>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <div class="overlay" id="blogOverlay"></div>
+    <section id="services" class="container">
+      <h2 class="section-title">My Expertise</h2>
+      <div class="services-grid">
+        <div class="card service-card">
+          <div class="service-icon">💻</div>
+          <h3>Full-Stack Development</h3>
+          <p>
+            Building scalable web applications from scratch using Django, Flask,
+            or React. I focus on clean code and performance.
+          </p>
+        </div>
 
-    <section id="downloads">
-      <h2>Downloads</h2>
-      <a href="Khwatsi Faith Chauke CV.pdf" class="button" download
-        >Curriculum Vitae</a
-      >
-      <a href="Khwatsi FNB App Academy.pdf" class="button" download
-        >FNB App Academy Certification</a
-      >
+        <div class="card service-card">
+          <div class="service-icon">📊</div>
+          <h3>Data Engineering</h3>
+          <p>
+            Designing ETL pipelines and managing SQL databases. I transform raw
+            data into structured, actionable insights.
+          </p>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">✨</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Crafting intuitive user interfaces. I bridge the gap between
+            technical functionality and human experience.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="icon">📬</div>
-      <p>
-        I’d love to hear from you! Whether you have a question, want to
-        collaborate, or just want to say hi, feel free to reach out.
-      </p>
-      <p>| <a href="https://github.com/rikotse" target="_blank">GitHub</a></p>
-
-      <p>
-        |
-        <a href="www.linkedin.com/in/khwatsi-chauke-4576b9295" target="_blank"
-          >LinkedIn</a
-        >
-      </p>
-
-      <p>
-        |
+    <section id="work" class="container">
+      <h2 class="section-title">Featured Creations</h2>
+      <div class="projects-grid">
         <a
-          href="https://mail.google.com/mail/u/11faith.c@gmail.com"
+          href="https://rikotse.pythonanywhere.com/"
           target="_blank"
-          >Email</a
+          class="project-card"
         >
-      </p>
+          <div
+            class="project-image"
+            style="
+              background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            "
+          ></div>
+          <div class="project-info">
+            <h3>Lorraine's Restaurant</h3>
+            <p>
+              <strong>The Logic:</strong> A robust Django backend managing
+              real-time cart data and SQL reservations.<br />
+              <strong>The Art:</strong> A mobile-first, appetizing UI designed
+              for seamless ordering.
+            </p>
+            <div class="mini-tags">
+              <span>Django</span><span>Full-Stack</span><span>UX</span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://task-manager-app-cez8.onrender.com"
+          target="_blank"
+          class="project-card"
+        >
+          <div
+            class="project-image"
+            style="
+              background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            "
+          ></div>
+          <div class="project-info">
+            <h3>Task Master</h3>
+            <p>
+              <strong>The Logic:</strong> Secure user authentication and CRUD
+              operations using Flask.<br />
+              <strong>The Art:</strong> A distraction-free, minimalist interface
+              to boost user focus.
+            </p>
+            <div class="mini-tags">
+              <span>Flask</span><span>Security</span><span>Clean UI</span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="https://rikotse.github.io/Dream-Virtual-Zen-Garden/"
+          target="_blank"
+          class="project-card"
+        >
+          <div
+            class="project-image"
+            style="
+              background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            "
+          ></div>
+          <div class="project-info">
+            <h3>Virtual Zen Garden</h3>
+            <p>
+              <strong>The Logic:</strong> Dynamic DOM manipulation and Audio API
+              integration.<br />
+              <strong>The Art:</strong> An immersive, calming environment
+              crafted with CSS animations.
+            </p>
+            <div class="mini-tags">
+              <span>Frontend</span><span>Audio</span><span>Interactive</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <button id="backToTop" title="Go to top">↑</button>
+    <section id="testimonials" class="container">
+      <h2 class="section-title">Kind Words</h2>
+      <div class="testimonial-grid">
+        <div class="card testimonial-card">
+          <p>
+            "Khwatsi combines technical skill with a rare eye for design. She
+            turned our complex requirements into a simple, beautiful app."
+          </p>
+          <div class="client-info">
+            <strong>- Colleague/Mentor Name</strong>
+            <span>Senior Developer</span>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <p>
+            "Her ability to learn new technologies fast—like moving from
+            Frontend to Data Engineering—is impressive. A true asset to any
+            team."
+          </p>
+          <div class="client-info">
+            <strong>- Project Manager Name</strong>
+            <span>Tech Lead</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2025 Khwatsi Faith Chauke. All rights reserved.</p>
+    <section id="blog" class="container">
+      <h2 class="section-title">Latest Insights</h2>
+      <div class="projects-grid">
+        <article class="card blog-card">
+          <span class="date">Aug 22, 2025</span>
+          <h3>Amazon Summit Experience</h3>
+          <p>
+            My key takeaways from the Johannesburg Amazon Summit and the power
+            of cloud computing.
+          </p>
+          <a href="#" class="read-link">Read Story ↗</a>
+        </article>
+
+        <article class="card blog-card">
+          <span class="date">Jul 25, 2025</span>
+          <h3>The FNB App Academy</h3>
+          <p>
+            Reflecting on my 9-week journey from "Hello World" to full-stack
+            deployment.
+          </p>
+          <a href="#" class="read-link">Read Story ↗</a>
+        </article>
+
+        <article class="card blog-card">
+          <span class="date">Aug 13, 2025</span>
+          <h3>Building Lorraine's App</h3>
+          <p>
+            How I solved the cart logic challenge while maintaining a sleek UI
+            design.
+          </p>
+          <a href="#" class="read-link">Read Story ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-glass">
+        <h2>Need a developer who sees the whole picture?</h2>
+        <p>
+          I am ready to bring <strong>Logic & Imagination</strong> to your team.
+        </p>
+        <a href="mailto:faith.c@gmail.com" class="btn-primary big-btn"
+          >Hire a Creative Engineer
+        </a>
+        <a
+          href="documents\Khwatsi Faith Chauke - Creative Engineer.pdf"
+          download
+          class="btn-secondary big-btn"
+          >Download CV ⬇</a
+        >
+
+        <div class="socials">
+          <a href="https://github.com/rikotse" target="_blank">GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/khwatsi-chauke-4576b9295"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+        <p class="copyright">
+          © 2025 Khwatsi Faith Chauke. The Creative Engineer. 👩🏾‍💻
+        </p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
