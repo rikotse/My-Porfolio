@@ -349,6 +349,30 @@ footer {
   text-decoration: none;
 }
 
+/* --- VIDEO PITCH SECTION --- */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(74, 29, 150, 0.15);
+  background: black;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* --- RESPONSIVE MOBILE  --- */
 @media (max-width: 768px) {
   .glass-nav {
