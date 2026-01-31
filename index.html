@@ -19,10 +19,29 @@
       <div class="nav-links">
         <a href="#hero">Home</a>
         <a href="#about">Story</a>
+        <a href="#services">Services</a>
         <a href="#work">Work</a>
+        <a href="#blog">Insights</a>
       </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
       <a href="#contact" class="btn-talk">Let's Talk</a>
     </nav>
+
+    <div class="mobile-menu">
+      <span class="close-modal mobile-close">&times;</span>
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">Story</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#blog" class="mobile-link">Insights</a>
+      <a href="#contact" class="mobile-link">Let's Talk</a>
+    </div>
 
     <section id="hero" class="hero-section">
       <div class="hero-content">
@@ -52,7 +71,7 @@
       <h2 class="section-title">The Full Picture</h2>
       <div class="bento-grid">
         <div class="card profile-card">
-          <img src="images/profile-pic.jpg" alt="Khwatsi" class="profile-img" />
+          <img src="Images/profile-pic.jpg" alt="Khwatsi" class="profile-img" />
           <h3>Khwatsi Faith Chauke</h3>
           <p>Creative Engineer 🇿🇦</p>
         </div>
@@ -160,7 +179,13 @@
             style="
               background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
             "
-          ></div>
+          >
+            <img
+              src="Images/lorraine-preview.jpg.png"
+              alt="Lorraine's Restaurant UI"
+              class="screenshot"
+            />
+          </div>
           <div class="project-info">
             <h3>Lorraine's Restaurant</h3>
             <p>
@@ -185,7 +210,13 @@
             style="
               background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             "
-          ></div>
+          >
+            <img
+              src="Images/taskmaster-preview.jpg.png"
+              alt="Task Master UI"
+              class="screenshot"
+            />
+          </div>
           <div class="project-info">
             <h3>Task Master</h3>
             <p>
@@ -210,7 +241,13 @@
             style="
               background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
             "
-          ></div>
+          >
+            <img
+              src="Images/zen-preview.jpg.png"
+              alt="Zen Garden UI"
+              class="screenshot"
+            />
+          </div>
           <div class="project-info">
             <h3>Virtual Zen Garden</h3>
             <p>
@@ -232,23 +269,27 @@
       <div class="testimonial-grid">
         <div class="card testimonial-card">
           <p>
-            "Khwatsi combines technical skill with a rare eye for design. She
-            turned our complex requirements into a simple, beautiful app."
+            "It is rare to find a developer who cares this much about the user
+            experience. Khwatsi didn't just build the backend for our
+            reservation system; she designed an interface that made it a joy to
+            use. She truly bridges the gap between logic and beauty."
           </p>
           <div class="client-info">
-            <strong>- Colleague/Mentor Name</strong>
-            <span>Senior Developer</span>
+            <strong>- Lorraine C.</strong>
+            <span>Restaurant Owner, Lorraine's</span>
           </div>
         </div>
+
         <div class="card testimonial-card">
           <p>
-            "Her ability to learn new technologies fast—like moving from
-            Frontend to Data Engineering—is impressive. A true asset to any
-            team."
+            "Her ability to absorb complex concepts—from Data Engineering
+            pipelines to Cybersecurity protocols—and immediately apply them is
+            impressive. Khwatsi brings a level of discipline and curiosity that
+            makes her an asset to any technical team."
           </p>
           <div class="client-info">
-            <strong>- Project Manager Name</strong>
-            <span>Tech Lead</span>
+            <strong>- David K.</strong>
+            <span>Senior Mentor, ALX</span>
           </div>
         </div>
       </div>
@@ -258,13 +299,31 @@
       <h2 class="section-title">Latest Insights</h2>
       <div class="projects-grid">
         <article class="card blog-card">
+          <span class="date">Jan 30, 2026</span>
+          <h3>Between Fear and Fire</h3>
+          <p>
+            Taking on Cybersecurity and Data Engineering simultaneously: Why I
+            chose excitement over comfort.
+          </p>
+          <a href="#" class="read-link">Read Story</a>
+        </article>
+        <article class="card blog-card">
+          <span class="date">Jan 30, 2026</span>
+          <h3>ALX Professional Foundations</h3>
+          <p>
+            From dreading the course to redefining my identity: How I found the
+            title "Creative Engineer."
+          </p>
+          <a href="#" class="read-link">Read Story</a>
+        </article>
+        <article class="card blog-card">
           <span class="date">Aug 22, 2025</span>
           <h3>Amazon Summit Experience</h3>
           <p>
             My key takeaways from the Johannesburg Amazon Summit and the power
             of cloud computing.
           </p>
-          <a href="#" class="read-link">Read Story ↗</a>
+          <a href="#" class="read-link">Read Story</a>
         </article>
 
         <article class="card blog-card">
@@ -274,7 +333,7 @@
             Reflecting on my 9-week journey from "Hello World" to full-stack
             deployment.
           </p>
-          <a href="#" class="read-link">Read Story ↗</a>
+          <a href="#" class="read-link">Read Story</a>
         </article>
 
         <article class="card blog-card">
@@ -284,7 +343,7 @@
             How I solved the cart logic challenge while maintaining a sleek UI
             design.
           </p>
-          <a href="#" class="read-link">Read Story ↗</a>
+          <a href="#" class="read-link">Read Story</a>
         </article>
       </div>
     </section>
@@ -318,6 +377,15 @@
         </p>
       </div>
     </footer>
+
+    <div id="blog-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Blog Title</h2>
+        <span id="modal-date">Date</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
