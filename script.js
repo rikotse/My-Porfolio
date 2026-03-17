@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTitle = document.getElementById("modal-title");
   const modalDate = document.getElementById("modal-date");
   const modalBody = document.getElementById("modal-body");
-  const closeBtn = document.querySelector(".close-modal");
+  const closeBtn = document.querySelector("#blog-modal .close-modal");
   const readLinks = document.querySelectorAll(".read-link");
 
   // 3. Open Modal
@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 7. MOBILE MENU LOGIC ---
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileClose = document.querySelector(".mobile-close");
   const mobileLinks = document.querySelectorAll(".mobile-link");
 
   if (hamburger && mobileMenu) {
