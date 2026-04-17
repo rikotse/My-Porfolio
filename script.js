@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. DEFINE DATA ---
   const engineerData = [
-    { label: "Lines of Code", value: 12500, suffix: "+", icon: "💻" },
-    { label: "Coffees Consumed", value: 10, suffix: " ☕", icon: "☕" },
-    { label: "Bugs Squashed", value: 99, suffix: "%", icon: "👾" },
-    { label: "Security Threats", value: 0, suffix: " (Clean)", icon: "🛡️" },
+    { label: "Data Processed", value: 500, suffix: " GB+", icon: "📊" },
+    { label: "Certifications", value: 2, suffix: " (ALX)", icon: "🎓" },
+    { label: "System Uptime", value: 99.9, suffix: "%", icon: "⚡" },
+    { label: "Security Audits", value: 12, suffix: " (Clean)", icon: "🛡️" },
   ];
 
   const metricsContainer = document.getElementById("metrics-display");
@@ -128,6 +128,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogPosts = [
     {
       id: 0,
+      title: "Certified: My Cybersecurity Journey with ALX",
+      date: "April 2026",
+      content: `
+    <p><strong>It's official! I am now a certified Cybersecurity professional through ALX.</strong></p>
+    <br>
+    <p>This journey has been a deep dive into the mechanics of digital defense. From understanding network protocols to mastering offensive security techniques, this certification marks a shift in my career. While my heart beats for Data Engineering, I believe that data is only as good as the security protecting it.</p>
+    <br>
+    <p>I am now focusing my energy on building secure data pipelines where privacy and protection are baked into the code, not bolted on afterward.</p>
+  `,
+    },
+
+    {
+      id: 1,
       title:
         "Between Fear and Fire: Taking on Cybersecurity and Data Engineering",
       date: "Jan 30, 2026",
@@ -146,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 1,
+      id: 2,
       title: "ALX Professional Foundations: A Silent but Defining Shift",
       date: "Jan 30, 2026",
       content: `
@@ -164,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 2,
+      id: 3,
       title: "My Experience at the Johannesburg Amazon Summit 2025",
       date: "March 22, 2025",
       content: `
@@ -182,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 3,
+      id: 4,
       title: "My Journey Through the FNB App Academy Bootcamp",
       date: "March 10, 2025",
       content: `
@@ -200,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 4,
+      id: 5,
       title: "Building Lorraine's Restaurant Web App",
       date: "April 5, 2025",
       content: `
