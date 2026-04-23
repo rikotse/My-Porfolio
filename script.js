@@ -314,3 +314,69 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// ==========================================
+// PROJECT AURA CASE STUDY LOGIC
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Scroll Reveal Animation Logic (Works globally for any element with .reveal-hidden)
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15, // Triggers when 15% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".reveal-hidden").forEach((section) => {
+    observer.observe(section);
+  });
+
+  // 2. Data Stream Simulator Logic (Only runs on the Aura Case Study page)
+  const simulateBtn = document.getElementById("simulateBtn");
+
+  if (simulateBtn) {
+    const terminal = document.getElementById("terminal");
+    const terminalOutput = document.getElementById("terminalOutput");
+
+    const mockData = [
+      "Initializing secure handshake...",
+      "Establishing connection to port 443...",
+      "SSL Certificate verified.",
+      "ENCRYPTING PAYLOAD (AES-256)...",
+      "Transmitting GPS Coordinates: -26.2485, 27.8540...",
+      "Heart rate telemetry: 112 BPM [ELEVATED]...",
+      "Routing through localized edge servers...",
+      "Connection to emergency dispatch: SUCCESS.",
+      "Data pipeline complete. Awaiting acknowledgment.",
+    ];
+
+    simulateBtn.addEventListener("click", () => {
+      terminal.style.display = "block";
+      simulateBtn.style.display = "none"; // Hide button once clicked
+      terminalOutput.innerHTML = ""; // Clear previous output
+
+      let delay = 0;
+      mockData.forEach((line, index) => {
+        setTimeout(() => {
+          const p = document.createElement("p");
+          p.style.margin = "0.3rem 0";
+          p.textContent = `> ${line}`;
+          terminalOutput.appendChild(p);
+          terminal.scrollTop = terminal.scrollHeight; // Auto-scroll to the bottom
+        }, delay);
+
+        // Random delay between 300ms and 900ms per line to simulate real processing time
+        delay += Math.random() * 600 + 300;
+      });
+    });
+  }
+});

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Aura | Case Study</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="container" style="padding-top: 2rem; padding-bottom: 2rem">
+      <a
+        href="index.html"
+        class="btn"
+        style="text-decoration: none; font-weight: bold"
+      >
+        &larr; Back to Portfolio
+      </a>
+    </nav>
+
+    <header class="container" style="text-align: center; margin-bottom: 4rem">
+      <h1
+        style="
+          font-size: 3rem;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(135deg, #4a1d96 0%, #c084fc 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        Project Aura (Urban Harmony)
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-color); opacity: 0.8">
+        Cybersecurity & Data Engineering Initiative
+      </p>
+
+      <div
+        class="mini-tags"
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 2rem;
+        "
+      >
+        <span
+          style="
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.9rem;
+          "
+          >Lead Architect</span
+        >
+        <span
+          style="
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.9rem;
+          "
+          >Python</span
+        >
+        <span
+          style="
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.9rem;
+          "
+          >SQL</span
+        >
+        <span
+          style="
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 0.9rem;
+          "
+          >IoT Data Architecture</span
+        >
+      </div>
+    </header>
+
+    <main
+      class="container"
+      style="max-width: 800px; margin: 0 auto; line-height: 1.8"
+    >
+      <section class="reveal-hidden" style="margin-bottom: 4rem">
+        <h2
+          style="
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+          "
+        >
+          The Context & Problem
+        </h2>
+        <p>
+          Urban environments present unique security challenges, particularly
+          regarding the lack of safe, real-time emergency communication for
+          vulnerable demographics. Traditional mobile devices can be cumbersome
+          to access or easily confiscated during distress situations,
+          highlighting a critical gap in personal safety infrastructure.
+        </p>
+      </section>
+
+      <section class="reveal-hidden" style="margin-bottom: 4rem">
+        <h2
+          style="
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+          "
+        >
+          The Solution
+        </h2>
+        <p>
+          To address this, I engineered the underlying data architecture and
+          technical strategy for a high-impact safety wristband prototype. The
+          system is designed to provide discreet SOS alerts, process real-time
+          safety inputs (such as live GPS tracking), and ensure secure data
+          transmission to local responders without relying entirely on direct
+          smartphone interaction.
+        </p>
+      </section>
+
+      <section class="reveal-hidden" style="margin-bottom: 4rem">
+        <h2
+          style="
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+          "
+        >
+          Technical Architecture & Security
+        </h2>
+        <ul style="padding-left: 1.5rem">
+          <li style="margin-bottom: 1rem">
+            <strong>Robust Data Pipelines:</strong> Designed the data flow to
+            actively ingest raw telemetry and location data from the wearable
+            hardware, structuring it for immediate, reliable retrieval during
+            high-stress scenarios.
+          </li>
+          <li style="margin-bottom: 1rem">
+            <strong>Security-First Methodology:</strong> Applied strict
+            cryptographic and privacy standards to the system design. Data
+            validation and access controls were implemented to ensure highly
+            vulnerable user data is locked down and secure by design.
+          </li>
+          <li>
+            <strong>Scalable Processing:</strong> Built the backend logic to
+            handle concurrent connections and process incoming emergency signals
+            with minimal latency.
+          </li>
+        </ul>
+        <div style="margin-top: 3rem; text-align: center">
+          <button id="simulateBtn" class="simulate-btn">
+            Simulate SOS Data Pipeline
+          </button>
+          <div
+            id="terminal"
+            class="data-terminal"
+            style="text-align: left; display: none"
+          >
+            <div id="terminalOutput"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal-hidden" style="margin-bottom: 4rem">
+        <h2
+          style="
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+          "
+        >
+          Prototype Architecture
+        </h2>
+        <p style="margin-bottom: 2rem">
+          Below is a demonstration of the hardware prototype's internal
+          component layering, designed to house the sensors and Bluetooth
+          modules required for real-time SOS data transmission.
+        </p>
+
+        <div
+          style="
+            background: #eaf1f8;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <video
+            width="100%"
+            autoplay
+            loop
+            muted
+            playsinline
+            style="display: block"
+          >
+            <source src="videos/3D PROTOTYPE.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+          "
+        >
+          <img
+            src="Images/aura-slide-1.png"
+            alt="Urban Harmony Initiative Features"
+            style="
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            "
+          />
+          <img
+            src="Images/aura-slide-2.png"
+            alt="Wristband SOS Activation"
+            style="
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            "
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+      "
+    >
+      <p>&copy; 2026. Designed and engineered for impact.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
