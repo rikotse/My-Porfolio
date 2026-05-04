@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 1. DEFINE DATA ---
   const engineerData = [
     { label: "Data Processed", value: 500, suffix: " GB+", icon: "📊" },
-    { label: "Certifications", value: 2, suffix: " (ALX)", icon: "🎓" },
+    { label: "Certifications", value: 3, suffix: " (ALX)", icon: "🎓" },
     { label: "System Uptime", value: 99.9, suffix: "%", icon: "⚡" },
     { label: "Security Audits", value: 12, suffix: " (Clean)", icon: "🛡️" },
   ];
@@ -128,8 +128,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogPosts = [
     {
       id: 0,
+      title: "The Bigger Bag: Data Engineering & Security Milestones",
+      date: "April 30, 2026",
+      content: `
+    <p><strong>April 2026 was a month of massive momentum.</strong> I officially completed both my Data Analysis and Cybersecurity tracks at ALX, proving that discipline and focus can turn pressure into precision.</p>
+    <br>
+    <p>For me, the Data Analysis certification is more than a milestone—it is a critical building block of my Data Engineering curriculum. It represents the "Data Brain" required to understand and structure information before engineering the complex pipelines that move it. By completing this alongside my Cybersecurity specialization, I am ensuring that my path toward the "bigger bag" of Data Engineering is built on a foundation of both insight and integrity.</p>
+    <br>
+    <p>Managing two rigorous specializations simultaneously in a single month was a test of my resilience as a Creative Engineer. It has sharpened my ability to architect systems that are secure by default and data-driven by nature. I am now one step closer to mastering the full data lifecycle, from secure ingestion to actionable analysis.</p>
+  `,
+    },
+
+    {
+      id: 1,
       title: "Certified: My Cybersecurity Journey with ALX",
-      date: "April 2026",
+      date: "April 23, 2026",
       content: `
     <p><strong>It's official! I am now a certified Cybersecurity professional through ALX.</strong></p>
     <br>
@@ -140,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     {
-      id: 1,
+      id: 2,
       title:
         "Between Fear and Fire: Taking on Cybersecurity and Data Engineering",
       date: "Jan 30, 2026",
@@ -159,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 2,
+      id: 3,
       title: "ALX Professional Foundations: A Silent but Defining Shift",
       date: "Jan 30, 2026",
       content: `
@@ -177,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 3,
+      id: 4,
       title: "My Experience at the Johannesburg Amazon Summit 2025",
       date: "March 22, 2025",
       content: `
@@ -195,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 4,
+      id: 5,
       title: "My Journey Through the FNB App Academy Bootcamp",
       date: "March 10, 2025",
       content: `
@@ -213,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
     },
     {
-      id: 5,
+      id: 6,
       title: "Building Lorraine's Restaurant Web App",
       date: "April 5, 2025",
       content: `
@@ -249,9 +262,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3. Open Modal
   readLinks.forEach((link, index) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault(); // Stop page jump
+      e.preventDefault();
 
-      // Get data based on index (assuming order matches)
+      // Get data based on index
       const post = blogPosts[index];
 
       // Populate Modal
@@ -324,14 +337,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.15, // Triggers when 15% of the element is visible
+    threshold: 0.15,
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("reveal-visible");
-        observer.unobserve(entry.target); // Only animate once
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
@@ -361,8 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     simulateBtn.addEventListener("click", () => {
       terminal.style.display = "block";
-      simulateBtn.style.display = "none"; // Hide button once clicked
-      terminalOutput.innerHTML = ""; // Clear previous output
+      simulateBtn.style.display = "none";
+      terminalOutput.innerHTML = "";
 
       let delay = 0;
       mockData.forEach((line, index) => {
@@ -371,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
           p.style.margin = "0.3rem 0";
           p.textContent = `> ${line}`;
           terminalOutput.appendChild(p);
-          terminal.scrollTop = terminal.scrollHeight; // Auto-scroll to the bottom
+          terminal.scrollTop = terminal.scrollHeight;
         }, delay);
 
         // Random delay between 300ms and 900ms per line to simulate real processing time
