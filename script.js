@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 1. DEFINE DATA ---
   const engineerData = [
     { label: "Data Processed", value: 500, suffix: " GB+", icon: "📊" },
-    { label: "Certifications", value: 4, suffix: " (Verified)", icon: "🎓" },
+    { label: "Certifications", value: 6, suffix: " (Verified)", icon: "🎓" },
     { label: "System Uptime", value: 99.9, suffix: "%", icon: "⚡" },
     { label: "Security Audits", value: 12, suffix: " (Clean)", icon: "🛡️" },
   ];
